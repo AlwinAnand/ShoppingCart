@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Shopping Cart Application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- application style sheets -->
+<link href="assets/styles/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="assets/styles/slider.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="assets/styles/account.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="assets/styles/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body ng-app="shoppingCartApplication">
+  <!--view -->
+  <div>Tetsing</div>
+  <div ui-view="MainView"></div>
+
+  <!-- application core libraries -->
+  <script type="text/javascript" src="scripts/common/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="scripts/common/move-top.js"></script>
+  <script type="text/javascript" src="scripts/common/easing.js"></script>
+  <script type="text/javascript" src="scripts/common/startstop-slider.js"></script>
+
+  <!-- <angular core libraries> -->
+  <script type="text/javascript" src="scripts/angular/angular.js"></script>
+  <script type="text/javascript" src="scripts/angular/angular-ui-router.js"></script>
+
+  <!-- <bootstrap core libraries> -->
+  <script type="text/javascript" src="scripts/bootstrap/bootstrap.js"></script>
+
+  <!-- <jquery core libraries> -->
+  <script type="text/javascript" src="scripts/jquery/jquery-3.2.1.js"></script>
+
+  <!-- angular libraries -->
+
+  <!-- global module scripts -->
+  <script type="text/javascript" src="components/global/global-module.js"></script>
+
+  <!-- account module scripts -->
+  <script type="text/javascript" src="components/account/account-module.js"></script>
+  <script type="text/javascript" src="components/account/services/loginService.js"></script>
+  <script type="text/javascript" src="components/account/controllers/loginController.js"></script>
+
+
+  <!-- header module scripts -->
+  <script type="text/javascript" src="components/header/header-module.js"></script>
+  <script type="text/javascript" src="components/header/controllers/homeController.js"></script>
+  <script type="text/javascript" src="components/header/controllers/aboutController.js"></script>
+  <script type="text/javascript" src="components/header/controllers/deliveryController.js"></script>
+  <script type="text/javascript" src="components/header/controllers/contactController.js"></script>
+  <script type="text/javascript" src="components/header/controllers/newsController.js"></script>
+
+  <!-- category module scripts -->
+  <script type="text/javascript" src="components/category/category-module.js"></script>
+
+  <!-- sub category module scripts -->
+  <script type="text/javascript" src="components/subcategory/subcategory-module.js"></script>
+
+  <!-- footer module scripts -->
+  <script type="text/javascript" src="components/footer/footer-module.js"></script>
+
+  <!-- product module scripts -->
+  <script type="text/javascript" src="components/product/product-module.js"></script>
+
+  <!-- home page scripts -->
+  <script type="text/javascript" src="components/home/home-module.js"></script>
+
+  <!-- <app.js file> -->
+  <script type="text/javascript" src="components/app.js"></script>
+
+</body>
+</html>

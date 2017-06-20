@@ -1,0 +1,51 @@
+<div class="wrap">
+      <div class="header">
+          <div class="headertop_desc">
+              <div class="call">
+                  <p><span>Need help?</span> call us <span class="number">1-22-3456789</span></span></p>
+              </div>
+              <div ng-include="'components/account/views/accountmenu.html'"></div>
+              <div class="clear"></div>
+          </div>
+
+          <div class="header_top">
+            <div class="logo">
+        				<a href="index.html"><img src="assets/images/ofslogo.jpg" alt="" /></a>
+        	  </div>
+      		  <div class="cart">
+              <p>Welcome to our Online Store! <span>Cart:</span>
+                <div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
+        			  	<ul class="dropdown">
+        							<li>you have no items in your Shopping cart</li>
+        					</ul>
+                </div>
+              </p>
+            </div>
+            <div class="clear"></div>
+          </div>
+
+          <div ng-include="'components/header/views/headermenu.html'"></div>
+          <div ng-include="'components/category/views/categorymenu.html'"></div>
+      </div>
+
+      <div class="main">
+          <div class="content">
+            <div ng-include="'components/product/new-product/views/new-product.html'"></div>
+            <div ng-include="'components/product/feature-product/views/feature-product.html'"></div>
+          </div>
+      </div>
+ </div>
+ <div class="footer">
+   <div class="wrap">
+    <div class="section group">
+      <div ng-include="'components/footer/views/information.html'"></div>
+      <div ng-include="'components/footer/views/whybuy.html'"></div>
+      <div ng-include="'components/footer/views/myaccount.html'"></div>
+      <div ng-include="'components/footer/views/contact.html'"></div>
+    </div>
+  </div>
+    <div class="copy_right">
+      <p>Company Name © All rights Reseverd | Design by  <a href="http://w3layouts.com">W3Layouts</a> </p>
+    </div>
+</div>
+<a href="#" id="toTop"><span id="toTopHover"> </span></a>
