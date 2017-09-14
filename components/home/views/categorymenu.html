@@ -3,10 +3,10 @@
 				<div class="categories">				
 				  <ul>
 				  	<h3>Categories</h3>
-				      <li><a ui-sref="#" ng-repeat="category in categorylist.menu" ng-click="showProducts(category.name)" >{{category.name}}</a>
+				      <li><a href="#" ng-repeat="category in categorylist.menu" ng-click="showProducts(category.name)" >{{category.name}}</a>
 					  </li>
 				  </ul>
 				</div>
 	  	     </div>
-			 <div ui-view></div>
-			
+			<div ng-include="'components/category/views/common.html'"></div>
+		</div>

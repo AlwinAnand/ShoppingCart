@@ -9,13 +9,11 @@
     $stateProvider.state('main', {
       url: '/main',
       views: {
-        MainView: {
-          templateUrl: '/components/home/views/main.html',
+        'MainView': {
+          templateUrl: '/components/home/views/main.html'
         }
       }
-
       //controller: 'homeController',
     });
-  }
-
+  } 
 })();

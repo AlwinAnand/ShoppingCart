@@ -4,9 +4,9 @@
   angular.module('shoppingCartApplication.account').
       controller('loginController', loginController);
 
-  loginController.$inject = ['$scope', '$state', 'loginService'];
+  loginController.$inject = ['$scope', '$state', 'loginService','$http'];
 
-  function loginController($scope, $state, loginService) {
+  function loginController($scope, $state, loginService,$http) {
     var vm = this;
 
     vm.loginInfo = {};
@@ -16,6 +16,10 @@
     vm.onChangeUsername = onChangeUsername;
     vm.onChangePassword = onChangePassword;
     vm.clearError = clearError;
+	vm.user = getJsonData;
+	vm.password = '';
+	//var check = getJsonData();
+	var check = getJsonData();
 
     function login() {
       if (!vm.loginInfo.userName || !vm.loginInfo.passWord) {
@@ -31,11 +35,16 @@
 
         return;
       }
-
-      var response = loginService.login($scope.username, $scope.password);
-      if (response) {
-        alert('success');
+	  
+	  	
+     var response = loginService.login($scope.username, $scope.password);	  
+	 
+      if (response && vm.loginInfo.userName === vm.user && vm.loginInfo.passWord === vm.password) {    	    
+		window.location.href = '#/main.html';	          
       }
+	  else{
+		alert('Invalid Credentials');		
+	  }	  
     };
 
     function onChangeUsername() {
@@ -45,7 +54,15 @@
     function onChangePassword() {
       vm.clearError();
     };
-
+    
+	function getJsonData(){
+	 $http.get('user.json').success(function(response){
+	   vm.user = (response.username);	
+       vm.password = (response.password);	   				 				 
+				 return;
+	  });	
+	};
+	
     function clearError() {
       vm.errorInfo.userRequired = false;
       vm.errorInfo.passwordRequired = false;

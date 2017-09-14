@@ -15,7 +15,6 @@
           controllerAs: 'loginControllerVm'
         }
       }
-
       //controller: 'homeController',
     });
   }

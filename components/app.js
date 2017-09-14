@@ -2,7 +2,7 @@
   'use strict'
 
   angular.module('shoppingCartApplication', ['ui.router', 'shoppingCartApplication.header',
-  'shoppingCartApplication.home', 'shoppingCartApplication.account']);
+  'shoppingCartApplication.home', 'shoppingCartApplication.account','shoppingCartApplication.category']);
   angular.module('shoppingCartApplication').config(shoppingCartConfiguration);
 
   shoppingCartConfiguration.$inject = ['$stateProvider', '$urlRouterProvider'];
