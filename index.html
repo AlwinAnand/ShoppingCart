@@ -11,10 +11,7 @@
 <link href="assets/styles/account.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="assets/styles/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
 </head>
-<body ng-app="shoppingCartApplication">
-  <!--view -->
-  <div>Tetsing</div>
-  <div ui-view="MainView"></div>
+<body ng-app="shoppingCartApplication">  
 
   <!-- application core libraries -->
   <script type="text/javascript" src="scripts/common/jquery-1.7.2.min.js"></script>
@@ -41,7 +38,7 @@
   <script type="text/javascript" src="components/account/account-module.js"></script>
   <script type="text/javascript" src="components/account/services/loginService.js"></script>
   <script type="text/javascript" src="components/account/controllers/loginController.js"></script>
-
+  
 
   <!-- header module scripts -->
   <script type="text/javascript" src="components/header/header-module.js"></script>
@@ -50,9 +47,12 @@
   <script type="text/javascript" src="components/header/controllers/deliveryController.js"></script>
   <script type="text/javascript" src="components/header/controllers/contactController.js"></script>
   <script type="text/javascript" src="components/header/controllers/newsController.js"></script>
-
+  
   <!-- category module scripts -->
   <script type="text/javascript" src="components/category/category-module.js"></script>
+  <script type="text/javascript" src="components/category/services/categoryService.js"></script>
+  <script type="text/javascript" src="components/category/controllers/categoryController.js"></script>
+  
 
   <!-- sub category module scripts -->
   <script type="text/javascript" src="components/subcategory/subcategory-module.js"></script>
@@ -68,6 +68,8 @@
 
   <!-- <app.js file> -->
   <script type="text/javascript" src="components/app.js"></script>
-
+<!--view -->
+  <div>Tetsing</div>
+  <div ui-view="MainView"></div>
 </body>
 </html>
