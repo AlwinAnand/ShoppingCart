@@ -1,0 +1,16 @@
+<span ng-if="new_product_added == true">
+	<div style="margin-top: 10px;"></div>
+	<div class="bg-success" style="border-radius: 5px;" ng-controller="cartController">
+		<div class="row" style="padding: 10px;">
+			<div class="col-sm-6">
+				<h4 class="text-danger">
+					<b><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Cart subtotal</b> ({{cartItems}} items): {{cartSubTotal | currency : "₹"}}
+				</h4>
+			</div>	
+			<div class="col-sm-6 text-right">
+				<a ui-sref="#" ng-click="viewCart()" class="btn btn-success" role="button">Cart</a>
+				<a ui-sref="#" class="btn btn-success" role="button">Proceed to Checkout ({{cartItems}} items)</a>
+			</div>	
+		</div>
+	</div>
+</span>

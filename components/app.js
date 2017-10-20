@@ -2,7 +2,7 @@
   'use strict'
 
   angular.module('shoppingCartApplication', ['ui.router', 'shoppingCartApplication.header',
-  'shoppingCartApplication.home', 'shoppingCartApplication.account','shoppingCartApplication.category']);
+  'shoppingCartApplication.home', 'shoppingCartApplication.account','shoppingCartApplication.category','shoppingCartApplication.cart']);
   angular.module('shoppingCartApplication').config(shoppingCartConfiguration);
 
   shoppingCartConfiguration.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -15,12 +15,12 @@
     //   });
 
     // $httpProvider.defaults.cache = false;
-    $urlRouterProvider.otherwise('/main');
+    $urlRouterProvider.otherwise('/login');
   };
 
   angular.module('shoppingCartApplication').run(shoppingCartApplicationRun);
   shoppingCartApplicationRun.$inject = ['$state'];
   function shoppingCartApplicationRun($state) {
-    $state.go('main');
+    $state.go('login');
   };
 }());

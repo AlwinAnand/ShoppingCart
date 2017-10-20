@@ -40,7 +40,7 @@
      var response = loginService.login($scope.username, $scope.password);	  
 	 
       if (response && vm.loginInfo.userName === vm.user && vm.loginInfo.passWord === vm.password) {    	    
-		window.location.href = '#/main.html';	          
+		window.location.href = '#/main';	          
       }
 	  else{
 		alert('Invalid Credentials');		

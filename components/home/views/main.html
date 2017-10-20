@@ -12,19 +12,18 @@
             <div class="logo">
         				<a href="index.html"><img src="assets/images/ofslogo.jpg" alt="" /></a>
         	  </div>
-      		  <div class="cart">
-              <p>Welcome to our Online $$$OFS$$$ Store! <span>Cart:</span>
-                <div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
-        			  	<ul class="dropdown">
-        							<li>you have no items in your Shopping cart</li>
-        					</ul>
-                </div>
+      		  <div class="cart" ng-controller="cartController">
+              <p>Welcome to our Online Store! 
+				<a ui-sref="#" ng-click="viewCart();" class="btn btn-primary btn-xs">
+					<b><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> {{cartItems}}</b>
+				</a>
               </p>
             </div>
             <div class="clear"></div>
           </div>
 		  
           <div ng-include="'components/header/views/headermenu.html'"></div>
+		  <div ng-include="'components/cart/views/add_cart.html'"></div>
 	     <div ng-include="'components/category/views/categorymenu.html'"></div>
       </div>
 

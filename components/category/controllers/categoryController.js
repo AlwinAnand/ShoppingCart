@@ -16,7 +16,7 @@
     vm.loginInfo = {};
     vm.errorInfo = {};
    	
-	var check = getJsonCategoryData(); 
+	var check = getJsonCategoryData();		
 	
     $scope.showProducts = function(categoryName){	
 	//var categoryNM = 'MobilePhones';

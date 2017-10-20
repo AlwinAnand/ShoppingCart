@@ -1,0 +1,40 @@
+<div class="header_bottom_right">
+	 <div class="slider">
+		 <div id="slider">
+			<div id="mover">
+				<div id="slide-1" class="slide">
+					<h1>Shopping Cart</h1>
+					<table class="table table-responsive" style="width: 80%;">
+						<tbody>
+							<tr ng-repeat="cart in cartlist">
+								<td width="120"><img width="120" height="90" src="assets/images/{{cart.product_image}}"/></td>
+								<td>
+									{{cart.product_name}}
+									<br><a ui-sref="#" ng-click="deleteProduct(cart.product_id);">Delete</a>
+								</td>
+								<td class="text-right">{{cart.price | currency : "₹"}}</td>
+								<td class="text-right"><select ng-model="cart.quantity" ng-options="quantity for quantity in quantities" ng-change="calculateTotal(cart.product_id, cart.quantity);"></select></td>				  
+							</tr>
+							<tr>
+								<td class="text-right" colspan="3">
+									<span class="text-success"><b>Subtotal: {{cartSubTotal | currency : "₹"}}</b></span>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="text-right" colspan="4">
+									<a ui-sref="#" class="btn btn-info btn-sm" role="button">Proceed to Checkout ({{cartItems}} items)</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="clear"></div>
+			  </div>
+			  <div class="slide">
+			  </div>
+		 </div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="clear"></div>
